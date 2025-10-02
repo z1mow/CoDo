@@ -6,30 +6,35 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		01261FFF2E66FD7000AD604F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01261FF32E66FD7000AD604F /* Assets.xcassets */; };
+		012620012E66FD7000AD604F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01261FF72E66FD7000AD604F /* LaunchScreen.storyboard */; };
+		012620022E66FD7000AD604F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01261FF92E66FD7000AD604F /* Main.storyboard */; };
+		012620042E66FD7000AD604F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FF22E66FD7000AD604F /* AppDelegate.swift */; };
+		012620052E66FD7000AD604F /* FriendTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FF42E66FD7000AD604F /* FriendTodoViewController.swift */; };
+		012620062E66FD7000AD604F /* OurTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FFA2E66FD7000AD604F /* OurTodoViewController.swift */; };
+		012620072E66FD7000AD604F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FFB2E66FD7000AD604F /* SceneDelegate.swift */; };
+		012620082E66FD7000AD604F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FFC2E66FD7000AD604F /* SettingsViewController.swift */; };
+		012620092E66FD7000AD604F /* SharedTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01261FFD2E66FD7000AD604F /* SharedTodoViewController.swift */; };
+		0126200D2E681C5800AD604F /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126200B2E681C5800AD604F /* TodoTableViewCell.swift */; };
+		0126200E2E681C5800AD604F /* TodoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0126200C2E681C5800AD604F /* TodoTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		011FAE642E66CD32001C86CF /* CoDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01261FF22E66FD7000AD604F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01261FF32E66FD7000AD604F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01261FF42E66FD7000AD604F /* FriendTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTodoViewController.swift; sourceTree = "<group>"; };
+		01261FF52E66FD7000AD604F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01261FF62E66FD7000AD604F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01261FF82E66FD7000AD604F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01261FFA2E66FD7000AD604F /* OurTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurTodoViewController.swift; sourceTree = "<group>"; };
+		01261FFB2E66FD7000AD604F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		01261FFC2E66FD7000AD604F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		01261FFD2E66FD7000AD604F /* SharedTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTodoViewController.swift; sourceTree = "<group>"; };
+		0126200B2E681C5800AD604F /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		0126200C2E681C5800AD604F /* TodoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		011FAE762E66CD33001C86CF /* Exceptions for "CoDo" folder in "CoDo" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 011FAE632E66CD32001C86CF /* CoDo */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		011FAE662E66CD32001C86CF /* CoDo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				011FAE762E66CD33001C86CF /* Exceptions for "CoDo" folder in "CoDo" target */,
-			);
-			path = CoDo;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		011FAE612E66CD32001C86CF /* Frameworks */ = {
@@ -45,7 +50,7 @@
 		011FAE5B2E66CD32001C86CF = {
 			isa = PBXGroup;
 			children = (
-				011FAE662E66CD32001C86CF /* CoDo */,
+				01261FFE2E66FD7000AD604F /* CoDo */,
 				011FAE652E66CD32001C86CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +61,49 @@
 				011FAE642E66CD32001C86CF /* CoDo.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		01261FEE2E66FD7000AD604F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		01261FEF2E66FD7000AD604F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		01261FF02E66FD7000AD604F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01261FFA2E66FD7000AD604F /* OurTodoViewController.swift */,
+				01261FF42E66FD7000AD604F /* FriendTodoViewController.swift */,
+				01261FFD2E66FD7000AD604F /* SharedTodoViewController.swift */,
+				01261FFC2E66FD7000AD604F /* SettingsViewController.swift */,
+				0126200B2E681C5800AD604F /* TodoTableViewCell.swift */,
+				0126200C2E681C5800AD604F /* TodoTableViewCell.xib */,
+				01261FF92E66FD7000AD604F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01261FFE2E66FD7000AD604F /* CoDo */ = {
+			isa = PBXGroup;
+			children = (
+				01261FF22E66FD7000AD604F /* AppDelegate.swift */,
+				01261FFB2E66FD7000AD604F /* SceneDelegate.swift */,
+				01261FF32E66FD7000AD604F /* Assets.xcassets */,
+				01261FF52E66FD7000AD604F /* Info.plist */,
+				01261FF72E66FD7000AD604F /* LaunchScreen.storyboard */,
+				01261FEE2E66FD7000AD604F /* Models */,
+				01261FF02E66FD7000AD604F /* Views */,
+				01261FEF2E66FD7000AD604F /* ViewModels */,
+			);
+			path = CoDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +120,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				011FAE662E66CD32001C86CF /* CoDo */,
 			);
 			name = CoDo;
 			packageProductDependencies = (
@@ -122,6 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01261FFF2E66FD7000AD604F /* Assets.xcassets in Resources */,
+				012620012E66FD7000AD604F /* LaunchScreen.storyboard in Resources */,
+				012620022E66FD7000AD604F /* Main.storyboard in Resources */,
+				0126200E2E681C5800AD604F /* TodoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +181,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012620042E66FD7000AD604F /* AppDelegate.swift in Sources */,
+				012620052E66FD7000AD604F /* FriendTodoViewController.swift in Sources */,
+				0126200D2E681C5800AD604F /* TodoTableViewCell.swift in Sources */,
+				012620062E66FD7000AD604F /* OurTodoViewController.swift in Sources */,
+				012620072E66FD7000AD604F /* SceneDelegate.swift in Sources */,
+				012620082E66FD7000AD604F /* SettingsViewController.swift in Sources */,
+				012620092E66FD7000AD604F /* SharedTodoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01261FF72E66FD7000AD604F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01261FF62E66FD7000AD604F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01261FF92E66FD7000AD604F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01261FF82E66FD7000AD604F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		011FAE782E66CD33001C86CF /* Debug */ = {
@@ -153,6 +228,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -185,6 +261,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

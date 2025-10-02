@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ATg-3p-w7t">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shared-->
+        <scene sceneID="mEx-r8-N2f">
+            <objects>
+                <viewController id="a7P-IT-R3c" customClass="SharedTodoViewController" customModule="CoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQf-Qj-2kH">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-qb-L40">
+                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <items>
+                                    <navigationItem title="Shared Todo's" id="RyD-GX-HZI">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="4DY-rC-qeC">
+                                            <connections>
+                                                <action selector="buttonAddSharedTodo:" destination="a7P-IT-R3c" id="rFk-R9-dZF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sVH-ub-My8">
+                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Xd-ZX-0bj"/>
+                        <constraints>
+                            <constraint firstItem="OxU-qb-L40" firstAttribute="top" secondItem="3Xd-ZX-0bj" secondAttribute="top" id="MZl-KW-An3"/>
+                            <constraint firstItem="sVH-ub-My8" firstAttribute="bottom" secondItem="3Xd-ZX-0bj" secondAttribute="bottom" id="SV7-1F-nxT"/>
+                            <constraint firstItem="sVH-ub-My8" firstAttribute="top" secondItem="OxU-qb-L40" secondAttribute="bottom" id="VfC-En-eem"/>
+                            <constraint firstItem="sVH-ub-My8" firstAttribute="trailing" secondItem="3Xd-ZX-0bj" secondAttribute="trailing" id="c5q-J4-EAo"/>
+                            <constraint firstItem="sVH-ub-My8" firstAttribute="leading" secondItem="3Xd-ZX-0bj" secondAttribute="leading" id="pXu-EF-0sT"/>
+                            <constraint firstItem="3Xd-ZX-0bj" firstAttribute="trailing" secondItem="OxU-qb-L40" secondAttribute="trailing" id="u9B-eU-adb"/>
+                            <constraint firstItem="OxU-qb-L40" firstAttribute="leading" secondItem="fQf-Qj-2kH" secondAttribute="leading" id="zpe-Ey-060"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="3" title="Shared" image="person.2.circle" catalog="system" id="AMl-bq-MfU"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableViewSharedTodo" destination="sVH-ub-My8" id="odC-zx-3YK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHQ-zI-eBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315" y="-145"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="duc-r3-Fae">
+            <objects>
+                <viewController id="t2w-9u-d5S" customClass="SettingsViewController" customModule="CoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcK-dH-Wb5">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dC1-Jw-Iz3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="4" title="Settings" image="gearshape" catalog="system" id="zyx-tf-k17"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31K-Z8-O2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-315" y="551"/>
+        </scene>
+        <!--Friend-->
+        <scene sceneID="1Ph-Qa-7wr">
+            <objects>
+                <viewController id="yRJ-3a-D0h" customClass="FriendTodoViewController" customModule="CoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fB8-Vs-y8q">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndx-Zs-5V0">
+                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <items>
+                                    <navigationItem title="Friend Todo's" id="wl7-Dm-Z9o">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="gXa-EX-uqL">
+                                            <connections>
+                                                <action selector="buttonAddFriendTodo:" destination="yRJ-3a-D0h" id="Q5m-5l-rwt"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-Ul-gIv">
+                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K9F-an-U3T"/>
+                        <constraints>
+                            <constraint firstItem="ndx-Zs-5V0" firstAttribute="top" secondItem="K9F-an-U3T" secondAttribute="top" id="0WF-vy-TBp"/>
+                            <constraint firstItem="Xjj-Ul-gIv" firstAttribute="leading" secondItem="K9F-an-U3T" secondAttribute="leading" id="JzW-gj-NDT"/>
+                            <constraint firstItem="Xjj-Ul-gIv" firstAttribute="trailing" secondItem="K9F-an-U3T" secondAttribute="trailing" id="Xvd-ci-d3B"/>
+                            <constraint firstItem="Xjj-Ul-gIv" firstAttribute="top" secondItem="ndx-Zs-5V0" secondAttribute="bottom" id="bcz-US-mUr"/>
+                            <constraint firstItem="K9F-an-U3T" firstAttribute="trailing" secondItem="ndx-Zs-5V0" secondAttribute="trailing" id="dTz-0i-DXN"/>
+                            <constraint firstItem="Xjj-Ul-gIv" firstAttribute="bottom" secondItem="K9F-an-U3T" secondAttribute="bottom" id="m9k-8G-rya"/>
+                            <constraint firstItem="ndx-Zs-5V0" firstAttribute="leading" secondItem="fB8-Vs-y8q" secondAttribute="leading" id="vDW-AN-sDy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Friend" image="person.circle" catalog="system" id="tmV-5j-oya"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableViewFriendTodo" destination="Xjj-Ul-gIv" id="dq0-bK-5os"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpO-Rw-m5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="552"/>
+        </scene>
+        <!--Me-->
+        <scene sceneID="Chp-KT-pZS">
+            <objects>
+                <viewController id="CZ9-7g-SXG" customClass="OurTodoViewController" customModule="CoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6Z-0o-myd">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rG-po-6sS">
+                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <items>
+                                    <navigationItem title="My Todo's" id="CBe-G6-ZfX">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="PU2-GI-TEC">
+                                            <connections>
+                                                <action selector="buttonAddOurTodo:" destination="CZ9-7g-SXG" id="AhP-6s-gfe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CWM-pu-Tzv">
+                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oEN-gz-wU3"/>
+                        <constraints>
+                            <constraint firstItem="6rG-po-6sS" firstAttribute="trailing" secondItem="oEN-gz-wU3" secondAttribute="trailing" id="1Qe-qO-8Eb"/>
+                            <constraint firstItem="CWM-pu-Tzv" firstAttribute="leading" secondItem="oEN-gz-wU3" secondAttribute="leading" id="PTC-fK-pvg"/>
+                            <constraint firstItem="oEN-gz-wU3" firstAttribute="trailing" secondItem="CWM-pu-Tzv" secondAttribute="trailing" id="V4W-zc-AcL"/>
+                            <constraint firstItem="CWM-pu-Tzv" firstAttribute="top" secondItem="6rG-po-6sS" secondAttribute="bottom" id="aeS-g0-1Qt"/>
+                            <constraint firstItem="6rG-po-6sS" firstAttribute="leading" secondItem="oEN-gz-wU3" secondAttribute="leading" id="dWt-JZ-iPF"/>
+                            <constraint firstItem="oEN-gz-wU3" firstAttribute="bottom" secondItem="CWM-pu-Tzv" secondAttribute="bottom" id="idR-Yi-LcQ"/>
+                            <constraint firstItem="6rG-po-6sS" firstAttribute="top" secondItem="oEN-gz-wU3" secondAttribute="top" id="v1K-U2-YDT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="person.crop.circle" catalog="system" id="mey-3R-lgK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableViewOurTodo" destination="CWM-pu-Tzv" id="Jad-OP-vtH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKR-TJ-fmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071" y="-145"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7mS-yq-LMW">
+            <objects>
+                <tabBarController id="ATg-3p-w7t" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zT3-5i-fY8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="CZ9-7g-SXG" kind="relationship" relationship="viewControllers" id="qCO-1H-jPQ"/>
+                        <segue destination="yRJ-3a-D0h" kind="relationship" relationship="viewControllers" id="dye-j1-7di"/>
+                        <segue destination="a7P-IT-R3c" kind="relationship" relationship="viewControllers" id="4zJ-T5-Nbz"/>
+                        <segue destination="t2w-9u-d5S" kind="relationship" relationship="viewControllers" id="Jdh-1P-4Vu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Cz-br-SKI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1978" y="209"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="person.2.circle" catalog="system" width="128" height="123"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
