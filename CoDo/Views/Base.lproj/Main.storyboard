@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24127" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ATg-3p-w7t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ATg-3p-w7t">
     <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
@@ -17,25 +17,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-qb-L40">
-                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <rect key="frame" x="0.0" y="126" width="440" height="54"/>
                                 <items>
                                     <navigationItem title="Shared Todo's" id="RyD-GX-HZI">
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="4DY-rC-qeC">
                                             <connections>
                                                 <action selector="buttonAddSharedTodo:" destination="a7P-IT-R3c" id="rFk-R9-dZF"/>
+                                                <segue destination="uW7-dc-xPV" kind="show" id="piC-JY-M0v"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sVH-ub-My8">
-                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <rect key="frame" x="0.0" y="180" width="440" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Xd-ZX-0bj"/>
                         <constraints>
-                            <constraint firstItem="OxU-qb-L40" firstAttribute="top" secondItem="3Xd-ZX-0bj" secondAttribute="top" id="MZl-KW-An3"/>
+                            <constraint firstItem="OxU-qb-L40" firstAttribute="top" secondItem="3Xd-ZX-0bj" secondAttribute="top" constant="2" id="MZl-KW-An3"/>
                             <constraint firstItem="sVH-ub-My8" firstAttribute="bottom" secondItem="3Xd-ZX-0bj" secondAttribute="bottom" id="SV7-1F-nxT"/>
                             <constraint firstItem="sVH-ub-My8" firstAttribute="top" secondItem="OxU-qb-L40" secondAttribute="bottom" id="VfC-En-eem"/>
                             <constraint firstItem="sVH-ub-My8" firstAttribute="trailing" secondItem="3Xd-ZX-0bj" secondAttribute="trailing" id="c5q-J4-EAo"/>
@@ -53,6 +54,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHQ-zI-eBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-315" y="-145"/>
+        </scene>
+        <!--Add Todo View Controller-->
+        <scene sceneID="eex-m9-Aca">
+            <objects>
+                <viewController id="uW7-dc-xPV" customClass="AddTodoViewController" customModule="CoDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WcS-uT-D3y">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="894"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mf-aR-24I">
+                                <rect key="frame" x="0.0" y="78" width="440" height="54"/>
+                                <items>
+                                    <navigationItem title="New Todo" id="PXz-dQ-4Zn">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="CFG-XK-Tfy">
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="buttonCancelTapped:" destination="uW7-dc-xPV" id="cNI-CJ-Q3U"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="uLC-YL-7Q3">
+                                            <connections>
+                                                <action selector="buttonDoneTapped:" destination="uW7-dc-xPV" id="Dda-kB-pL7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pR9-un-4yZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6mf-aR-24I" firstAttribute="top" secondItem="pR9-un-4yZ" secondAttribute="top" constant="16" id="Ufx-RK-dwr"/>
+                            <constraint firstItem="6mf-aR-24I" firstAttribute="leading" secondItem="pR9-un-4yZ" secondAttribute="leading" id="Y4L-sR-u45"/>
+                            <constraint firstItem="6mf-aR-24I" firstAttribute="trailing" secondItem="pR9-un-4yZ" secondAttribute="trailing" id="dRU-Fe-dI3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eeq-gl-14G"/>
+                    <connections>
+                        <outlet property="buttonCancel" destination="CFG-XK-Tfy" id="lUQ-IF-pzv"/>
+                        <outlet property="buttonDone" destination="uLC-YL-7Q3" id="NId-uj-9ab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sU-Vd-vbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="209"/>
         </scene>
         <!--Settings-->
         <scene sceneID="duc-r3-Fae">
@@ -79,25 +125,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndx-Zs-5V0">
-                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <rect key="frame" x="0.0" y="126" width="440" height="54"/>
                                 <items>
                                     <navigationItem title="Friend Todo's" id="wl7-Dm-Z9o">
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="gXa-EX-uqL">
                                             <connections>
                                                 <action selector="buttonAddFriendTodo:" destination="yRJ-3a-D0h" id="Q5m-5l-rwt"/>
+                                                <segue destination="uW7-dc-xPV" kind="show" id="Nug-oX-DnZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xjj-Ul-gIv">
-                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <rect key="frame" x="0.0" y="180" width="440" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K9F-an-U3T"/>
                         <constraints>
-                            <constraint firstItem="ndx-Zs-5V0" firstAttribute="top" secondItem="K9F-an-U3T" secondAttribute="top" id="0WF-vy-TBp"/>
+                            <constraint firstItem="ndx-Zs-5V0" firstAttribute="top" secondItem="K9F-an-U3T" secondAttribute="top" constant="2" id="0WF-vy-TBp"/>
                             <constraint firstItem="Xjj-Ul-gIv" firstAttribute="leading" secondItem="K9F-an-U3T" secondAttribute="leading" id="JzW-gj-NDT"/>
                             <constraint firstItem="Xjj-Ul-gIv" firstAttribute="trailing" secondItem="K9F-an-U3T" secondAttribute="trailing" id="Xvd-ci-d3B"/>
                             <constraint firstItem="Xjj-Ul-gIv" firstAttribute="top" secondItem="ndx-Zs-5V0" secondAttribute="bottom" id="bcz-US-mUr"/>
@@ -125,19 +172,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rG-po-6sS">
-                                <rect key="frame" x="0.0" y="124" width="440" height="54"/>
+                                <rect key="frame" x="0.0" y="126" width="440" height="54"/>
                                 <items>
                                     <navigationItem title="My Todo's" id="CBe-G6-ZfX">
                                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="PU2-GI-TEC">
                                             <connections>
                                                 <action selector="buttonAddOurTodo:" destination="CZ9-7g-SXG" id="AhP-6s-gfe"/>
+                                                <segue destination="uW7-dc-xPV" kind="show" id="WI6-rw-hTa"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CWM-pu-Tzv">
-                                <rect key="frame" x="0.0" y="178" width="440" height="661"/>
+                                <rect key="frame" x="0.0" y="180" width="440" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -149,7 +197,7 @@
                             <constraint firstItem="CWM-pu-Tzv" firstAttribute="top" secondItem="6rG-po-6sS" secondAttribute="bottom" id="aeS-g0-1Qt"/>
                             <constraint firstItem="6rG-po-6sS" firstAttribute="leading" secondItem="oEN-gz-wU3" secondAttribute="leading" id="dWt-JZ-iPF"/>
                             <constraint firstItem="oEN-gz-wU3" firstAttribute="bottom" secondItem="CWM-pu-Tzv" secondAttribute="bottom" id="idR-Yi-LcQ"/>
-                            <constraint firstItem="6rG-po-6sS" firstAttribute="top" secondItem="oEN-gz-wU3" secondAttribute="top" id="v1K-U2-YDT"/>
+                            <constraint firstItem="6rG-po-6sS" firstAttribute="top" secondItem="oEN-gz-wU3" secondAttribute="top" constant="2" id="v1K-U2-YDT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="person.crop.circle" catalog="system" id="mey-3R-lgK"/>
@@ -183,6 +231,9 @@
             <point key="canvasLocation" x="-1978" y="209"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="piC-JY-M0v"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="person.2.circle" catalog="system" width="128" height="123"/>

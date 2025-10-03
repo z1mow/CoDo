@@ -9,11 +9,15 @@ import UIKit
 
 class TodoTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var buttonComplete: UIButton!
     @IBOutlet weak var labelTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        labelTitle.lineBreakMode = .byWordWrapping
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
